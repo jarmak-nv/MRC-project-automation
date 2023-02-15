@@ -11,6 +11,7 @@ on:
 
 jobs:
   add-to-project:
+    if: ${{ contains(github.event.issue.labels.*.name, 'bug') == false }}
     name: Add issue or PR to project
     runs-on: ubuntu-latest
     steps:
